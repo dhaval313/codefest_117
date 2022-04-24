@@ -21,11 +21,11 @@ for lis in inpset:
             maxp = lis[i] - minp
             mind = i
 
-    hr = (570 + (mind*10) + 10) // 60   #addint 570 mins (9:30 hours) to selling time, dividing it by 60 and storing floor value
+    hr = (570 + (mind*10)) // 60   #addint 570 mins (9:30 hours) to selling time, dividing it by 60 and storing floor value
     if hr > 12:
         hr = hr - 12    #convert to 12hr format if it's over hr is over 12
     
-    min = (570 + (mind*10) + 10) % 60   #storing minutes 
+    min = (570 + (mind*10)) % 60   #storing minutes 
     time = str(hr) + '.' + str(min) #formating time
 
     f.write(str([maxp,time])+"\n")  #writing in output.txt file
