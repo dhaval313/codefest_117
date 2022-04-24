@@ -1,7 +1,3 @@
-# takeout = [17, 8, 24]
-# dinein = [12, 19, 2]
-# served = [17, 8, 12, 19, 24, 2]
-
 inp = []
 with open("mayurinp.txt") as f:
     n = int(f.readline())
@@ -18,7 +14,7 @@ for i in inp:
         x = [int(j) for j in k[1:-1].split(',')]
         temp.append(x)
     inpset.append(temp)
-# print(inpset)
+    
 output = []
 for i in inpset:
     lt = len(i[0])
